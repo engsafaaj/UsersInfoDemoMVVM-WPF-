@@ -1,0 +1,20 @@
+﻿<Window x:Class="UsersInfo.Views.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsersInfo.Views" xmlns:viewmodel="clr-namespace:UsersInfo.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:UserViewModel}"
+        mc:Ignorable="d"
+        Title="AddUser" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="15">
+            <Label x:Name="label" Content="Full Name"/>
+            <TextBox x:Name="textBoxFullName" Text="{Binding FullName}" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
+            <Label x:Name="label_Copy" Content="Email"/>
+            <TextBox x:Name="textBoxEmail" Text="{Binding Email}"  TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
+            <Label x:Name="label_Copy1" Content="Phone Number"/>
+            <TextBox x:Name="textBoxPhone" Text="{Binding PhoneNumber}"  TextWrapping="Wrap" Width="120" HorizontalAlignment="Left"/>
+            <Button x:Name="ButtonSave" Content="Save" Command="{Binding SaveCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>
